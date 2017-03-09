@@ -1,0 +1,13 @@
+.form__slogan {
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 24px;
+  color: $secondary-text-color;
+}
+
+.form__required {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: $secondary-text-color
+}

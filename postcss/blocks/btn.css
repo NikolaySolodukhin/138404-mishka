@@ -1,0 +1,35 @@
+.btn {
+  font-family: $font-family-set;
+  font-weight: bold;
+  line-height: 20px;
+  font-size: 18px;
+  width: 260px;
+  color: $secondary-text-color;
+  text-decoration: none;
+  border: 2px solid $secondary-text-color;
+  text-transform: uppercase;
+  background-color: white;
+  text-align: center;
+  padding: 15px;
+  display: block;
+  box-sizing: border-box;
+  margin: 0 auto;
+
+    &_tiffany{
+      color: white;
+      background-color: $color-tiffani;
+    }
+
+    &_process {
+      width: 192px;
+    }
+
+    &:hover, &:focus {
+      background-color: $secondary-text-color;
+      color: white;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
+}

@@ -1,0 +1,10 @@
+.production-process__title {
+  @mixin secondary-title;
+}
+
+.production-process__description {
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 24px;
+  color: $secondary-text-color;
+}

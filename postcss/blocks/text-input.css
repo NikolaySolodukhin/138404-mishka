@@ -1,0 +1,27 @@
+.text-input__label {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.text-input__control {
+  background-position: right;
+  background-repeat: no-repeat;
+  border: none;
+  width: 100%;
+  min-height: 42px;
+  border-bottom: 2px solid black;
+  @mixin set-font-text-control;
+
+  &_tel {
+    background-image: url('../img/icon-phone.svg');
+  }
+
+  &_email {
+    background-image: url('../img/icon-mail.svg');
+  }
+
+  &:hover, &:focus {
+    border-color: $color-tiffani;
+    }
+}
