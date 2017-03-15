@@ -1,0 +1,19 @@
+@define-mixin main-title {
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 30px;
+  color: black;
+}
+
+@define-mixin secondary-title {
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+@define-mixin set-font-text-control {
+  font-family: $font-family-set;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 18px;
+}

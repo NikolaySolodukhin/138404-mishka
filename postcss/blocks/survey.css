@@ -1,0 +1,11 @@
+.survey {
+  border: none;
+}
+
+.survey__legend {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 16px;
+  color: $color-tiffani;
+  text-transform: uppercase;
+}

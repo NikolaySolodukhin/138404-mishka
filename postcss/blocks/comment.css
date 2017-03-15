@@ -1,0 +1,20 @@
+.comment__text {
+font-weight: normal;
+font-size: 15px;
+line-height: 30px;
+color: $secondary-text-color;
+}
+
+.comment__author {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  color: black;
+}
+
+.comment__nick{
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 30px;
+  color: $secondary-text-color;
+}

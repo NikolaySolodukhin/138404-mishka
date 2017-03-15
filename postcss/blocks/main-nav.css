@@ -1,0 +1,30 @@
+.main-nav__link,
+.main-nav__user-link {
+  @mixin secondary-title;
+  text-decoration: none;
+  color: black;
+
+  &:hover, &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity:0.3;
+  }
+}
+
+.main-nav__user-link {
+  background-repeat: no-repeat;
+  &_search {
+    background-image: url('../img/icon-search.svg');
+  }
+
+  &_basket {
+    background-image: url('../img/icon-cart.svg');
+  }
+}
+
+.main-nav__list,
+.main-nav__user-list {
+  list-style: none;
+}

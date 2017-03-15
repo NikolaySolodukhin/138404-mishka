@@ -1,0 +1,16 @@
+.checkbox-input {
+  position: relative;
+}
+
+.checkbox-input__label {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+  display: block;
+  padding: 8px 0 15px 0;
+  overflow: hidden;
+}
+
+.checkbox-input__control {
+  display: none;
+}

@@ -1,0 +1,24 @@
+.contacts {
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 30px;
+  color: $secondary-text-color;
+}
+
+.contacts__title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  color: black;
+}
+
+.contacts__param,
+.contacts__value {
+  display: inline-block;
+}
+
+.contacts__link {
+  text-decoration: none;
+  color: $secondary-text-color;
+  border-bottom: 1px solid $color-tiffani;
+}

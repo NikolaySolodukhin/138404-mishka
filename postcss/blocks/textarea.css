@@ -1,0 +1,12 @@
+.textarea {
+  border: 2px solid $secondary-text-color;
+  min-height: 142px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px;
+  @mixin set-font-text-control;
+
+  &:hover, &:focus {
+    border-color: $color-tiffani;
+    }
+}
