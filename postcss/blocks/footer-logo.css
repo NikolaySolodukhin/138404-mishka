@@ -1,0 +1,7 @@
+.footer-logo {
+  display: none;
+  @media (--tablet-width) {
+    display: flex;
+    align-items: center;
+  }
+}

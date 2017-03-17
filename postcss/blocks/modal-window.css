@@ -2,14 +2,38 @@
   display: none;
   position: fixed;
   width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.9);
 
   &_show {
-    display: block;
+    display: none;
   }
+}
+
+.modal-window__container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  box-sizing: border-box;
+  width: 320px;
+  padding: 30px 29px 46px;
+  transform: translate(-50%, -50%);
+  border: 1px solid $color-border-control;
+  background-color: white;
+  box-shadow: 0 5px 5px 0 $color-border-control;
+}
+
+.modal-window__form {
+  text-align: center;
 }
 
 .modal-window__title {
   @mixin main-title;
+  margin: 0 50px;
+  text-transform: uppercase;
 }
 
 .modal-window__text {

@@ -1,7 +1,52 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  width: 100%;
+  border: 1px solid $color-border;
+  @media (--tablet-width) {
+    align-items: stretch;
+    margin-bottom: 53px;
+    flex-direction: row;
+  }
+  @media (--desktop-width) {
+    width: 30%;
+    flex-direction: column;
+  }
+}
+
+.product__text {
+  padding-left: 9.6%;
+  padding-right: 9.6%;
+  cursor: pointer;
+  padding-top: 27px;
+  @media (--tablet-width) {
+    width: 42%;
+    padding: 0 4%;
+    display: flex;
+    padding-top: 26px;
+    flex-direction: column;
+  }
+  @media (--desktop-width) {
+    width: auto;
+    padding: 0 8%;
+    flex-grow: 1;
+    padding-top: 22px;
+  }
+}
+
+.product__name,
+.product__description,
+.product__buy {
+  margin: 0;
+}
+
 .product__name {
   @mixin secondary-title;
-  color: $secondary-text-color;
+  color: black;
   text-decoration: none;
+  margin-bottom: 5px;
+
 
   &:hover, &:focus {
     opacity: 0.6;
@@ -10,6 +55,10 @@
   &:active {
     opacity: 0.3;
   }
+  @media (--tablet-width) {
+    font-size: 20px;
+    padding-left: 3px;
+  }
 }
 
 .product__description {
@@ -17,21 +66,70 @@
   font-size: 13px;
   line-height: 30px;
   color: $secondary-text-color;
+  margin-bottom: 18px;
+  @media (--tablet-width) {
+    font-size: 15px;
+    padding-left: 5px;
+  }
 }
 
-.product__link{
+.product__link {
   text-decoration: none;
+  width: 100%;
+  @media (--tablet-width) {
+    &_half-width {
+      width: 50%;
+    }
+  }
+  @media (--desktop-width) {
+    width: 100%;
+  }
 }
 
 .product__buy {
+  display: flex;
+  justify-content: space-between;
   font-weight: bold;
   line-height: 24px;
   font-size: 15px;
+  padding-top: 20px;
+  padding-bottom: 29px;
+  border-top: 1px solid #ececec;
+  @media (--tablet-width) {
+    font-size: 17px;
+    margin-top: auto;
+    padding-bottom: 26px;
+    padding-left: 8px;
+  }
+  @media (--desktop-width) {
+    padding-left: 0px;
+  }
+}
+
+.product__img {
+  display: block;
+  height: auto;
+  width: 100%;
+  @media (--tablet-width) {
+    width: 334px;
+    height: 334px;
+  }
+  @media (--desktop-width) {
+    width: 100%;
+    height: 465px;
+  }
 }
 
 .product__add {
   border: none;
   background-color: white;
+  padding: 0 4px;
+  @media (--tablet-width) {
+    padding: 0 3px;
+  }
+  @media(--desktop-width) {
+    padding: 0 7px;
+  }
 }
 
 .product__basket {

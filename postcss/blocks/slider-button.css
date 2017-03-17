@@ -1,4 +1,22 @@
+.slider-button {
+  display: flex;
+  margin: 12px 0 37px;
+  @media (--tablet-width) {
+    margin: -89px 0 0 auto;
+  }
+}
+
 .slider-button__control {
+  padding-top: 12px;
+  padding-left: 2px;
+  padding-bottom: 8px;
+  width: 50%;
+  border: 1px solid $color-border;
+  background-color: white;
+  @media (--tablet-width) {
+    width: 86px;
+    border: 0px;
+  }
   &:hover, &:focus {
     opacity: 0.6;
   }

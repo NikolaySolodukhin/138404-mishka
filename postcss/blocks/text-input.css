@@ -1,20 +1,50 @@
+.text-input {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin-bottom: 22px;
+  @media (--tablet-width) {
+    flex-direction: row;
+    align-items: baseline;
+    margin-bottom: 24px;
+  }
+}
+
 .text-input__label {
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
+  @media (--tablet-width) {
+    font-size: 19px;
+    margin-right: 26px;
+  }
 }
 
 .text-input__control {
-  background-position: right;
+  background-position: top 10px right 6px;
   background-repeat: no-repeat;
+  background-color: transparent;
   border: none;
   width: 100%;
-  min-height: 42px;
+  padding: 16px 0;
   border-bottom: 2px solid black;
   @mixin set-font-text-control;
-
+  @media (--tablet-width) {
+    font-size: 19px;
+    padding-top: 11px;
+    padding-bottom: 13px;
+    padding-left: 17px;
+    margin-bottom: 0px;
+    background-position: top 11px right 24px;
+  }
+  @media (--desktop-width) {
+    background-position: top 11px right 6px;
+  }
   &_tel {
     background-image: url('../img/icon-phone.svg');
+    @media (--tablet-width) {
+      margin-bottom: 0px;
+    }
   }
 
   &_email {

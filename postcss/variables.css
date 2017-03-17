@@ -1,5 +1,14 @@
 $color-tiffani:#63d1bb;
+$color-border: #ededed;
 $secondary-text-color:#444444;
 $background-color:#f1f1f1;
+$background-color-main: #fbfbfb;
 $color-aquamarine:#56c3b2;
 $font-family-set: "Open Sans", Arial, sans-serif;
+$color-border-control:#c7c7c7;
+
+$column-width-tablet: 25%;
+$column-width-dekstop: 16.667%;
+
+@custom-media --tablet-width (min-width: 768px);
+@custom-media --desktop-width (min-width: 1100px);

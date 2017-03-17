@@ -22,13 +22,14 @@
 @import "blocks/map.css";
 @import "blocks/copyright.css";
 @import "blocks/page-footer.css";
+@import "blocks/footer-logo.css";
 @import "blocks/social.css";
 
 @import "blocks/form.css";
 @import "blocks/survey.css";
 @import "blocks/radio-input.css";
 @import "blocks/checkbox-input.css";
-@import "blocks/textarea.css";
+@import "blocks/textarea-input.css";
 @import "blocks/text-input.css";
 @import "blocks/modal-window.css";
 @import "blocks/select.css";
