@@ -1,5 +1,26 @@
+.best-product__header {
+  display: flex;
+  flex-direction: column;
+  @media (--tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @media (--desktop-width) {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+}
+
 .best-product__title {
   @mixin main-title;
+  margin: 0 0 6px;
+  @media (--tablet-width) {
+    @mixin main-title-tablet;
+  }
+  @media (--desktop-width) {
+    @mixin main-title-desktop;
+  }
 }
 
 .best-product__title-week {
@@ -7,6 +28,33 @@
   font-size: 17px;
   line-height: 20px;
   color: $color-tiffani;
+  text-transform: uppercase;
+  margin-top: 0px;
+  margin-bottom: 7px;
+  @media (--tablet-width) {
+    line-height: 17px;
+    width: $column-width-tablet;
+    padding-left: 40px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+  @media (--desktop-width) {
+    width: $column-width-dekstop;
+    padding-left: 23px;
+    padding-right: 30px;
+  }
+}
+
+.best-product__item {
+  @media (--tablet-width) {
+    position: relative;
+    padding-right: calc($column-width-tablet*2 + 45px);
+    padding-top: 26px;
+  }
+  @media (--desktop-width) {
+    padding: 20px calc($column-width-dekstop*3 + 55px) 0 $column-width-dekstop;
+}
 }
 
 .best-product__description {
@@ -14,18 +62,58 @@
   font-size: 15px;
   line-height: 24px;
   color: $secondary-text-color;
+  @media (--tablet-width) {
+    font-size: 17px;
+    line-height: 30px;
+    margin-bottom: 37px;
+  }
+  @media (--desktop-width) {
+    margin-bottom: 48px;
+    margin-top: 23px;
+  }
+}
+
+.best-product__table {
+  width: 100%;
+  margin: 18px 0 28px;
+  border-collapse: collapse;
+  @media (--tablet-width) {
+    margin-bottom: 55px;
+  }
+  @media (--desktop-width) {
+    margin-bottom: 110px;
+  }
 }
 
 .best-product__key {
   font-weight: normal;
   font-size: 15px;
   line-height: 20px;
+  padding: 9px 26px 10px 0;
   color: $secondary-text-color;
+  @media (--tablet-width) {
+    padding-right: 12px;
+  }
 }
 
 .best-product__value {
   font-weight: normal;
   font-size: 15px;
   line-height: 20px;
+  padding: 9px 26px 10px 0;
   color: $secondary-text-color;
+}
+
+.best-product__row {
+  border-bottom: 1px solid $color-border;
+}
+
+.best-product__image {
+  display: block;
+  margin-bottom: 24px;
+  @media (--tablet-width) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
 }

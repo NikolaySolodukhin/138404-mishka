@@ -1,8 +1,25 @@
+.comment {
+  &_hidden {
+    display: none;
+  }
+}
+
 .comment__text {
-font-weight: normal;
-font-size: 15px;
-line-height: 30px;
-color: $secondary-text-color;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 30px;
+  color: $secondary-text-color;
+  margin-bottom: 26px;
+  @media (--tablet-width) {
+    font-size: 17px;
+    line-height: 30px;
+    margin-top: 44px;
+    margin-bottom: 57px;
+  }
+  @media (--desktop-width) {
+    margin-right: 80px;
+    margin-bottom: 38px;
+  }
 }
 
 .comment__author {
@@ -10,9 +27,14 @@ color: $secondary-text-color;
   font-size: 18px;
   line-height: 24px;
   color: black;
+  margin-bottom: 3px;
+  @media (--tablet-width) {
+    width: calc($column-width-tablet*2);
+  }
 }
 
 .comment__nick{
+  margin-top: 0;
   font-weight: normal;
   font-size: 17px;
   line-height: 30px;

@@ -3,7 +3,6 @@
   font-weight: bold;
   line-height: 20px;
   font-size: 18px;
-  width: 260px;
   color: $secondary-text-color;
   text-decoration: none;
   border: 2px solid $secondary-text-color;
@@ -12,16 +11,44 @@
   text-align: center;
   padding: 15px;
   display: block;
+  width: 100%;
   box-sizing: border-box;
-  margin: 0 auto;
 
-    &_tiffany{
+    &_tiffany {
       color: white;
       background-color: $color-tiffani;
+      border-color: $color-tiffani;
     }
 
-    &_process {
-      width: 192px;
+    &_product {
+      margin-top: 26px;
+      @media (--tablet-width) {
+        margin-top: 33px;
+      }
+    }
+
+    &_review {
+      @media (--tablet-width) {
+      width: 175px;
+      margin-right: 0;
+      order: -1;
+      margin-top: 3px;
+      @media (--desktop-width) {
+        margin-top: 16px;
+      }
+    }
+    }
+
+    &_feedback {
+      @media (--tablet-width) {
+        width: 230px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @media (--desktop-width) {
+        margin-left: 0;
+        margin-right: 0;
+      }
     }
 
     &:hover, &:focus {

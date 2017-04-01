@@ -1,0 +1,19 @@
+.map {
+  position: relative;
+  min-height: 460px;
+  background-image: url('../img/map-mobile@1x.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 -11.5% 37px;
+  @media (--tablet-width) {
+    height: 458px;
+    margin: 0 -7.43% 53px;
+  }
+  @media (--desktop-width) {
+    position: absolute;
+    width: 525px;
+    margin: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
