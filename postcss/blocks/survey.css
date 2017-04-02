@@ -2,7 +2,7 @@
   border: none;
   padding-right: 0px;
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 1px;
   padding-left: 0;
   margin-right: 0;
   margin-left: 0;
@@ -21,7 +21,6 @@
 .survey__wrapper {
   display: flex;
   flex-direction: column;
-  padding-bottom: 11px;
   @media (--tablet-width) {
     flex-direction: row;
     align-items: baseline;

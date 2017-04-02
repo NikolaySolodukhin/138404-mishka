@@ -9,7 +9,6 @@
 }
 
 .form__description {
-  margin-bottom: 24px;
   @media (--tablet-width) {
     margin-bottom: 0px;
   }
@@ -23,7 +22,7 @@
 .form__footer {
   display: flex;
   flex-direction: column;
-  margin-top: 5px;
+  margin-top: 14px;
   @media (--tablet-width) {
     flex-direction: row-reverse;
     justify-content: space-between;

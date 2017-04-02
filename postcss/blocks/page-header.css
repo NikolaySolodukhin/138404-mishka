@@ -2,6 +2,7 @@
   position: relative;
   background-color: $background-color;
   margin-bottom: 30px;
+  border-top: 1px solid $color-border;
   &_form {
     margin-bottom: 23px;
   }
@@ -12,8 +13,9 @@
   }
   @media (--tablet-width) {
     margin-bottom: 80px;
+    margin-top: -42px;
     &_main {
-        min-height: 674px;
+        min-height: 742px;
         margin-bottom: 47px;
       }
     }
@@ -46,11 +48,9 @@
   text-align: center;
   padding-top: 70px;
   padding-bottom: 76px;
-  &_catalog {
-    padding-left: 23px;
-  }
+  margin-top: 0;
   &_main {
-    padding-top: 52px;
+    padding-top: 70px;
     padding-bottom: 94px;
   }
   @media (--tablet-width) {
@@ -58,15 +58,15 @@
     padding-top: 94px;
     padding-bottom: 73px;
     &_main {
-      padding-top: 54px;
+      padding-top: 153px;
+    }
+    &_catalog {
+      padding-bottom: 80px;
     }
   }
   @media (--desktop-width) {
     @mixin main-title-desktop;
     min-height: 65px;
-    &_main {
-      padding-top: 47px;
-    }
   }
 }
 
@@ -99,12 +99,16 @@
     background-color: $color-tiffani;
     background-position: top 23px right 37px;
     transform: translateY(10px);
-    @media (--tablet-width) {
-      transform: translateY(5px);
-    }
     &:hover,
     &:focus {
-      transform: translateY(0);
+      transform: translateY(5px);
+    }
+    @media (--tablet-width) {
+      transform: translateY(5px);
+      &:hover,
+      &:focus {
+        transform: translateY(0);
+      }
     }
   }
   &_toys {

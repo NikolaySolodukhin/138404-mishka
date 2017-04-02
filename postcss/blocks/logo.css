@@ -1,5 +1,5 @@
 .logo__img {
-
+  margin: 19px 0;
   &:hover, &:focus {
     opacity: 0.6;
   }
