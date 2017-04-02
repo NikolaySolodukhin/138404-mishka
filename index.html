@@ -13,7 +13,11 @@
 
   <header class="top-menu container">
     <a class="logo">
-      <img class="logo__img" src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
+      <picture>
+        <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+        <img class="logo__img" src="img/logo-mobile.svg" alt="Мишка">
+      </picture>
     </a>
     <button class="top-menu__toggle" type="button"></button>
 
@@ -40,9 +44,15 @@
     <nav class="main-nav main-nav_nojs">
       <ul class="main-nav__user-list">
         <li class="main-nav__user-item main-nav__user-item_search">
+          <svg class="main-nav__icon" width="18" height="19">
+            <use xlink:href="build/img/symbols.svg#icon-search"></use>
+          </svg>
           <a class="main-nav__user-link" href="#">Поиск по сайту</a>
         </li>
         <li class="main-nav__user-item main-nav__user-item_basket">
+          <svg class="main-nav__icon" width="21" height="18">
+            <use xlink:href="build/img/symbols.svg#icon-cart"></use>
+          </svg>
           <a class="main-nav__user-link" href="#">Корзина: пока пуста</a>
         </li>
       </ul>
@@ -61,9 +71,8 @@
 
   <main class="page-main">
 
-    <section class="best-goods container">
-
-      <article class="best-product">
+    <article class="best-product">
+      <div class="container">
         <div class="best-product__header">
           <h2 class="best-product__title">Вязаные корзинки</h2>
           <h3 class="best-product__title-week">Товар недели</h3>
@@ -86,15 +95,18 @@
               </tr>
             </tbody>
           </table>
-          <img class="best-product__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязанные корзинки">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@2x.jpg 2x, img/triple-set-desktop@1x.jpg 1x">
+            <source media="(min-width: 768px)" srcset="img/triple-set-tablet@2x.jpg 2x, img/triple-set-tablet@1x.jpg 1x">
+            <img class="best-product__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x, img/triple-set-mobile@1x.jpg 1x" alt="Вязанные корзинки">
+          </picture>
           <footer class="best-product-price">
             Цена: 990 руб.
             <a class="btn btn_product" href="#">Заказать</a>
           </footer>
         </div>
-      </article>
-
-    </section>
+      </div>
+    </article>
 
     <section class="about container">
       <div class="about__wrapper">
@@ -109,44 +121,49 @@
       </div>
     </section>
 
-    <article class="review container">
-      <h2 class="review__title">Отзывы</h2>
+    <article class="review">
+      <div class="container review__wrapper">
+        <h2 class="review__title">Отзывы</h2>
 
-      <section class="review__content comment">
-        <p class="comment__text">Я&nbsp;молодая мама, но&nbsp;все равно фотографии не&nbsp;набирали и&nbsp;близко такого количества лайков, как у популярных инстамамочек.&nbsp;В отчаянии, я&nbsp;накупила аксессуаров и&nbsp;игрушек в&nbsp;Мишке, и&nbsp;мои фотографии сразу стали более стильными, а&nbsp;также набирают больше лайков</p>
-        <p class="comment__author">Анастасия Красильникова</p>
-        <p class="comment__nick">@misssssiskras</p>
-      </section>
+        <section class="review__content comment">
+          <p class="comment__text">Я&nbsp;молодая мама, но&nbsp;все равно фотографии не&nbsp;набирали и&nbsp;близко такого количества лайков, как у популярных инстамамочек.&nbsp;В отчаянии, я&nbsp;накупила аксессуаров и&nbsp;игрушек в&nbsp;Мишке, и&nbsp;мои фотографии сразу стали более стильными, а&nbsp;также набирают больше лайков</p>
+          <p class="comment__author">Анастасия Красильникова</p>
+          <p class="comment__nick">@misssssiskras</p>
+        </section>
 
-      <section class="review__content comment comment_hidden">
-        <p class="comment__text">Воздействие возбуждает неорганический эксикатор. Суперкислота Льюиса разъедает окисленный серный эфир, поглощая их&nbsp;в&nbsp;количестве сотен и&nbsp;тысяч процентов от&nbsp;собственного исходного объема. Молекула адсорбирует валентный электрон. При осуществлении искусственных ядерных реакций было доказано, что электронное облако химически модифицирует окисленный синтез</p>
-        <p class="comment__author">Виктория Лапшина</p>
-        <p class="comment__nick">@lapsha</p>
-      </section>
+        <section class="review__content comment comment_hidden">
+          <p class="comment__text">Воздействие возбуждает неорганический эксикатор. Суперкислота Льюиса разъедает окисленный серный эфир, поглощая их&nbsp;в&nbsp;количестве сотен и&nbsp;тысяч процентов от&nbsp;собственного исходного объема. Молекула адсорбирует валентный электрон. При осуществлении искусственных ядерных реакций было доказано, что электронное облако химически модифицирует окисленный синтез</p>
+          <p class="comment__author">Виктория Лапшина</p>
+          <p class="comment__nick">@lapsha</p>
+        </section>
 
-      <section class="review__content comment comment_hidden">
-        <p class="comment__text">Популяционный индекс прочно вызывает случайный ионный хвост. Болид , как&nbsp;бы это ни&nbsp;казалось парадоксальным, вращает случайный узел. Каллисто, как&nbsp;бы это ни&nbsp;казалось парадоксальным, колеблет математический горизонт. Многие кометы имеют два хвоста, однако юлианская дата наблюдаема</p>
-        <p class="comment__author">Иван Маслов</p>
-        <p class="comment__nick">@maslov</p>
-      </section>
+        <section class="review__content comment comment_hidden">
+          <p class="comment__text">Популяционный индекс прочно вызывает случайный ионный хвост. Болид , как&nbsp;бы это ни&nbsp;казалось парадоксальным, вращает случайный узел. Каллисто, как&nbsp;бы это ни&nbsp;казалось парадоксальным, колеблет математический горизонт. Многие кометы имеют два хвоста, однако юлианская дата наблюдаема</p>
+          <p class="comment__author">Иван Маслов</p>
+          <p class="comment__nick">@maslov</p>
+        </section>
 
-      <section class="review__content comment comment_hidden">
-        <p class="comment__text">Служба маркетинга компании неверно искажает повседневный медиамикс. Итак, ясно, что селекция бренда спонтанно трансформирует культурный мониторинг активности. Концепция развития сознательно продуцирует конструктивный пак-шот. Психологическая среда раскручивает повторный контакт</p>
-        <p class="comment__author">Кекс</p>
-        <p class="comment__nick">@kekso</p>
-      </section>
+        <section class="review__content comment comment_hidden">
+          <p class="comment__text">Служба маркетинга компании неверно искажает повседневный медиамикс. Итак, ясно, что селекция бренда спонтанно трансформирует культурный мониторинг активности. Концепция развития сознательно продуцирует конструктивный пак-шот. Психологическая среда раскручивает повторный контакт</p>
+          <p class="comment__author">Кекс</p>
+          <p class="comment__nick">@kekso</p>
+        </section>
 
-      <div class="slider-button">
-        <button class="slider-button__control" type="button" name="button">
-          <img src="img/icon-left-arrow.svg" alt="Left">
-        </button>
-        <button class="slider-button__control" type="button" name="button">
-          <img src="img/icon-right-arrow.svg" alt="Right">
-        </button>
+        <div class="slider-button">
+          <button class="slider-button__control" type="button" name="button">
+            <svg class="slider-button__icon" width="50" height="26">
+              <use xlink:href="build/img/symbols.svg#icon-left-arrow"></use>
+            </svg>
+          </button>
+          <button class="slider-button__control" type="button" name="button">
+            <svg class="slider-button__icon" width="50" height="26">
+              <use xlink:href="build/img/symbols.svg#icon-right-arrow"></use>
+            </svg>
+          </button>
+        </div>
+
+        <a class="btn btn_review" href="#">Написать</a>
       </div>
-
-      <a class="btn btn_review" href="#">Написать</a>
-
     </article>
 
     <section class="contacts container">
@@ -179,23 +196,33 @@
     <div class="page-footer__wrapper container">
       <section class="page-footer__logo footer-logo">
         <a class="footer-logo__link" href="index.html">
-          <img class="footer-logo__img" src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
+          <svg class="footer-logo__img" width="102" height="34">
+            <use xlink:href="build/img/symbols.svg#logo-footer"></use>
+          </svg>
         </a>
       </section>
       <section class="page-footer__social social">
         <a class="social__link social__link_instagram" href="https://www.instagram.com/htmlacademy">Instagram
-          <img class="social__icon" src="img/icon-insta.svg" width="22" height="21" alt="Инстаграмм">
+          <svg class="social__icon" width="22" height="21">
+            <use xlink:href="build/img/symbols.svg#icon-insta"></use>
+          </svg>
         </a>
         <a class="social__link social__link_facebook" href="https://www.facebook.com/htmlacademy">Facebook
-          <img class="social__icon" src="img/icon-fb.svg" width="15" height="29" alt="Фейсбук">
+          <svg class="social__icon" width="15" height="29">
+            <use xlink:href="build/img/symbols.svg#icon-fb"></use>
+          </svg>
         </a>
         <a class="social__link social__link_twitter" href="https://twitter.com/htmlacademy_ru">Twitter
-          <img class="social__icon" src="img/icon-twitter.svg" width="24" height="20" alt="Твиттер">
+          <svg class="social__icon" width="24" height="20">
+            <use xlink:href="build/img/symbols.svg#icon-twitter"></use>
+          </svg>
         </a>
       </section>
       <section class="page-footer__copyright copyright">
         <a class="copyright__link" href="https://htmlacademy.ru">Разработано
-          <img class="copyright__link-img" src="img/logo-htmlacademy.svg" width="27" height="34" alt="HTML Academy"/>
+          <svg class="copyright__link-img" width="27" height="34">
+            <use xlink:href="build/img/symbols.svg#logo-htmlacademy"></use>
+          </svg>
         </a>
       </section>
     </div>

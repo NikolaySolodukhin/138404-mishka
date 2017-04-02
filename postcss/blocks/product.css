@@ -4,6 +4,13 @@
   margin-bottom: 30px;
   width: 100%;
   border: 1px solid $color-border;
+  &:hover .product__text,
+  &:focus .product__text {
+    box-shadow: 0 4px 5px 2px $color-border;
+  }
+  &:active .product__text {
+    box-shadow: 0 2px 5px 1px $color-border;
+  }
   @media (--tablet-width) {
     align-items: stretch;
     margin-bottom: 53px;

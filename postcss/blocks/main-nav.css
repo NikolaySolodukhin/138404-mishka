@@ -11,6 +11,18 @@
   &_show:last-of-type {
     top: 238px;
   }
+  &_nojs {
+    position: static;
+    display: flex;
+  }
+  &.main-nav_nojs .main-nav__list {
+    padding-top: 4px;
+  }
+  &.main-nav_nojs .main-nav__list,
+  &.main-nav_nojs .main-nav__user-list {
+    margin-right: -9.5%;
+    margin-left: -9.5%;
+  }
   @media (--tablet-width) {
     position: static;
     display: flex;
@@ -168,5 +180,18 @@
     &_search {
       font-size: 0;
     }
+  }
+}
+
+.main-nav__icon {
+  position: absolute;
+  top: 30px;
+  left: 31px;
+  fill: $color-border-control;
+  @media (--tablet-width) {
+    position: absolute;
+    top: 35px;
+    left: 32px;
+    fill: $color-border-control;
   }
 }

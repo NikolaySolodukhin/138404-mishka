@@ -4,6 +4,9 @@ var gulp = require("gulp");
 var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var precss = require("precss");
+var rename = require('gulp-rename');
+var svgstore = require("gulp-svgstore");
+var svgmin = require("gulp-svgmin");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
 
@@ -20,6 +23,23 @@ gulp.task("style", function() {
     .pipe(server.stream());
 });
 
+gulp.task('symbols', function() {
+   return gulp.src('img/icons/*.svg')
+     .pipe(svgmin())
+     .pipe(svgstore({
+        inlineSvg: true
+      }))
+      .pipe(rename('symbols.svg'))
+      .pipe(gulp.dest('build/img'));
+  });
+
+
+ gulp.task("svg", function() {
+   return gulp.src("img/*.svg")
+     .pipe(svgmin())
+     .pipe(gulp.dest("img"));
+ });
+
 gulp.task("serve", ["style"], function() {
   server.init({
     server: ".",
@@ -32,3 +52,5 @@ gulp.task("serve", ["style"], function() {
   gulp.watch("postcss/**/*.css", ["style"]);
   gulp.watch("*.html").on("change", server.reload);
 });
+
+gulp.task ("build", ["style", "svg","symbols"]);

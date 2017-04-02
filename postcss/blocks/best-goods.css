@@ -1,9 +1,0 @@
-.best-goods {
-  margin-bottom: 46px;
-  @media (--tablet-width) {
-    margin-bottom: 82px;
-  }
-  @media (--desktop-width) {
-    margin-bottom: 110px;
-  }
-}

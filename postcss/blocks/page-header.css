@@ -8,23 +8,51 @@
   }
   &_main {
     min-height: 466px;
-    background: $background-color-main url('../img/hero-mobile@1x.jpg') no-repeat center -19px;
+    background-color: $background-color-main;
+    background-image: url('../img/hero-mobile@1x.jpg');
+    background-repeat: no-repeat;
+    background-position: center -19px;
     margin-bottom: 27px;
+    @media (--retina) {
+      background-image: url('../img/hero-mobile@2x.jpg');
+      background-size: 575px auto;
+  }
   }
   @media (--tablet-width) {
     margin-bottom: 80px;
     margin-top: -42px;
+    &::after {
+      position: absolute;
+      bottom: -14px;
+      width: 100%;
+      height: 23px;
+      content: '';
+      background: url('../img/bg-zigzag-fill.svg') repeat-x;
+      background-size: contain;
+    }
     &_main {
         min-height: 742px;
         margin-bottom: 47px;
+        background-color: $background-color-main;
+        background-image: url('../img/hero-desktop@1x.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        @media (--retina) {
+         background-image: url('../img/hero-desktop@2x.jpg');
+         background-size: 1150px auto;
+       }
       }
     }
   @media (--desktop-width) {
     margin-bottom: 145px;
+    &::after {
+      bottom: -19px;
+      height: 34px;
+    }
     &_main {
       margin-bottom: 124px;
-    }
   }
+}
 }
 
 .page-header__wrapper {
