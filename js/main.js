@@ -1,7 +1,7 @@
 'use strict';
 
-ymaps.ready(function() {
-  var myMap = new ymaps.Map("map-canvas", {
+  ymaps.ready(function() {
+    var myMap = new ymaps.Map("map-canvas", {
       center: [59.935955, 30.321965],
       zoom: 16
     }, {
@@ -17,5 +17,5 @@ ymaps.ready(function() {
       iconImageOffset: [-45, -137]
     });
 
-  myMap.geoObjects.add(myPlacemark);
-});
+    myMap.geoObjects.add(myPlacemark);
+  });

@@ -14,29 +14,42 @@
     <a class="logo" href="index.html">
       <img class="logo__img" src="img/logo-mobile.svg" width="86" height="35" alt="Мишка">
     </a>
-    <nav class="main-nav main-nav_closed main-nav_nojs">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
+    <button class="top-menu__toggle" type="button"></button>
+
+    <nav class="main-nav main-nav_nojs">
       <ul class="main-nav__list">
-        <li class="main-nav__item">
-          <a class="main-nav__link">Каталог товаров</a>
+        <li class="main-nav__item main-nav__item_tablet">
+          <a class="main-nav__link main-nav__link_padding" href="catalog.html">Каталог товаров</a>
         </li>
-        <li class="main-nav__item">
-          <a class="main-nav__link" href="form.html">Вязание на заказ</a>
+        <li class="main-nav__item main-nav__item_tablet">
+          <a class="main-nav__link main-nav__link_correct-padding" href="form.html">Вязание на заказ</a>
+        </li>
+        <li class="main-nav__item main-nav__item_desktop">
+          <a class="main-nav__link" href="#">Новые поступления</a>
+        </li>
+        <li class="main-nav__item main-nav__item_desktop">
+          <a class="main-nav__link" href="#">Распродажа</a>
+        </li>
+        <li class="main-nav__item main-nav__item_delivery">
+          <p class="main-nav__delivery-text">Бесплатная доставка по России</p>
         </li>
       </ul>
+    </nav>
+
+    <nav class="main-nav main-nav_nojs">
       <ul class="main-nav__user-list">
-        <li class="main-nav__user-item">
-          <a class="main-nav__user-link main-nav__user-link_search" href="#">Поиск по сайту</a>
+        <li class="main-nav__user-item main-nav__user-item_search">
+          <a class="main-nav__user-link" href="#">Поиск по сайту</a>
         </li>
-        <li class="main-nav__user-item main-nav__user-item_cart">
-          <a class="main-nav__user-link main-nav__user-link_basket" href="#">Корзина:пока пуста</a>
+        <li class="main-nav__user-item main-nav__user-item_basket">
+          <a class="main-nav__user-link" href="#">Корзина: пока пуста</a>
         </li>
       </ul>
     </nav>
   </header>
 
   <header class="page-header">
-    <h1 class="page-header__title container">Каталог&nbsp;товаров</h1>
+    <h1 class="page-header__title page-header__title_catalog container">Каталог&nbsp;товаров</h1>
   </header>
 
   <main class="page-main container">
