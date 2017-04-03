@@ -12,3 +12,4 @@ $column-width-dekstop: 16.667%;
 
 @custom-media --tablet-width (min-width: 768px);
 @custom-media --desktop-width (min-width: 1100px);
+@custom-media --retina (min-resolution: 144dpi), (min-resolution: 1.5dppx);
