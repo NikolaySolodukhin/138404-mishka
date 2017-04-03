@@ -5,7 +5,7 @@ window.utils = (function () {
   let mainNav = topMenuToggle.parentNode.querySelectorAll(".main-nav");
 
   for (var i = 0; i < mainNav.length; i++) {
-   mainNav[i].classList.remove('main-nav_nojs');
+    mainNav[i].classList.remove('main-nav_nojs');
   }
 
   topMenuToggle.addEventListener("click", function() {
