@@ -88,4 +88,11 @@
   color: $secondary-text-color;
   padding-bottom: 5px;
   border-bottom: 1px solid $color-tiffani;
+  &:hover,
+  &:focus {
+    color: $color-tiffani;
+  }
+  &:active {
+    opacity: 0.3;
+  }
 }

@@ -140,8 +140,13 @@
 }
 
 .product__basket {
-
-  &:hover, &:focus {
-    color: $color-tiffani;
+  fill: $color-border;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    fill: $color-tiffani;
+  }
+  &:active {
+    opacity: 0.3;
   }
 }

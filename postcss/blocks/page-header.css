@@ -122,14 +122,28 @@
   margin: 0 -11.5%;
   padding: 26px 150px 31px 28px;
   transition: transform 0.2s;
+  &::after {
+    position: absolute;
+    content: '';
+    transition: opacity 0.1s;
+    opacity: 0.7;
+  }
+  &:hover::after{
+    opacity: 0.9;
+  }
   &_interior {
-    background-image: url("../img/icon-interior.svg");
     background-color: $color-tiffani;
-    background-position: top 23px right 37px;
     transform: translateY(10px);
     &:hover,
     &:focus {
       transform: translateY(5px);
+    }
+    &::after {
+      top: 23px;
+      right: 37px;
+      width: 40px;
+      height: 62px;
+      background-image: url("../img/icon-interior.svg");
     }
     @media (--tablet-width) {
       transform: translateY(5px);
@@ -137,21 +151,32 @@
       &:focus {
         transform: translateY(0);
       }
+      &::after {
+        top: 31px;
+      }
     }
   }
   &_toys {
-    background-image: url("../img/icon-toy.svg");
     background-color: $color-aquamarine;
-    background-position: top 21px right 27px;
     transform: translateY(5px);
     &:hover,
     &:focus {
       transform: translateY(0);
     }
+    &::after {
+      top: 21px;
+      right: 27px;
+      width: 60px;
+      height: 60px;
+      background-image: url("../img/icon-toy.svg");
+    }
     @media (--tablet-width) {
-      background-position: top 32px right 34px;
+      &::after {
+      top: 33px;
+      right: 33px;
     }
   }
+}
   @media(--tablet-width) {
     font-size: 20px;
     line-height: 30px;
