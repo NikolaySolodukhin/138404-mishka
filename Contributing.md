@@ -55,7 +55,7 @@ git checkout -b module2-task1
           cacheKey.includes('assets/') ||
           cacheKey.endsWith('jquery.min.js');
   }
-```
+ ```
    Нет, в этом нет необходимости. Мы закешировали ресурсы на этапе установки `service-worker`а
    
 4. Оказалось, что невозможно обновить статику из директорий vendor и assets. 
