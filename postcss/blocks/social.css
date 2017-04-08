@@ -21,3 +21,13 @@
     margin-right: 0px;
   }
 }
+
+.social__icon {
+  &:hover,
+  &:focus {
+    fill: $color-tiffani;
+  }
+  &:active {
+    opacity: 0.3;
+  }
+}

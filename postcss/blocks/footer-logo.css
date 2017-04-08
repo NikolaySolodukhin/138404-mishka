@@ -5,3 +5,13 @@
     align-items: center;
   }
 }
+
+.footer-logo__img {
+  &:hover,
+  &:focus {
+    fill: $color-tiffani;
+  }
+  &:active {
+    opacity: 0.3;
+  }
+}

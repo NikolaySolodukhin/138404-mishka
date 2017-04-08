@@ -3,6 +3,10 @@
   box-sizing: border-box;
   margin-bottom: 57px;
   padding-bottom: 31px;
+  &:hover,
+  &:focus {
+    box-shadow: 0 4px 5px 2px $color-border;
+  }
   @media (--tablet-width) {
     padding-bottom: 31px;
     margin-bottom: 64px;

@@ -165,12 +165,11 @@
   background-repeat: no-repeat;
   background-position: 31px;
   background-repeat: no-repeat;
-  &_search {
-    background-image: url('../img/icon-search.svg');
+  &:hover .main-nav__icon {
+    fill: $color-tiffani;
   }
-
-  &_basket {
-    background-image: url('../img/icon-cart.svg');
+  &:active .main-nav__icon {
+    opacity: 0.3;
   }
   @media (--tablet-width) {
     &_basket,

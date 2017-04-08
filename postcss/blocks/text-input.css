@@ -46,10 +46,18 @@
     @media (--tablet-width) {
       margin-bottom: 0px;
     }
+    &:hover,
+    &:focus {
+      background-image: url('../img/icon-phone-hover.svg');
+    }
   }
 
   &_email {
     background-image: url('../img/icon-mail.svg');
+    &:hover,
+    &:focus {
+      background-image: url('../img/icon-mail-hover.svg');
+    }
   }
 
   &:hover, &:focus {

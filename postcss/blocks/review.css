@@ -17,9 +17,11 @@
   @media (--tablet-width) {
     flex-direction: row;
     background: url('../img/review@1x.jpg') no-repeat;
+    background-position-x: calc(50% - 350px);
     @media (--retina) {
       background: url('../img/review@2x.jpg') no-repeat;
       background-size: 350px auto;
+      background-position-x: calc(50% - 350px);
     }
     margin-top: 10px;
     margin-bottom: 48px;
@@ -32,8 +34,6 @@
   @media (--desktop-width) {
     padding-top: 70px;
     padding-bottom: 168px;
-    background-position-x: 6.4%;
-    background-position-y: 9px;
     margin-bottom: 75px;
     &::after {
       height: 23px;
