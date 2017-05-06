@@ -142,7 +142,7 @@ gulp.task('serve', ['clean:dev','style:dev', 'concat:dev', 'symbols:dev'], funct
     ui: false
   });
 
-  gulp.watch('postcss/**/*.css', ['style']);
+  gulp.watch('postcss/**/*.css', ['style:dev']);
   gulp.watch('*.html', ['html:update']);
 });
 
