@@ -31,7 +31,8 @@
     "svg": "gulp svg",
     "images": "gulp images",
     "start": "gulp serve",
-    "demo": "gulp build && gulp demo"
+    "demo": "gulp build && gulp demo",
+    "deploy": "gulp deploy"
   },
   "editorconfig-cli": [
     "*.html",

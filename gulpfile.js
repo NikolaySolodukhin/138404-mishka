@@ -16,6 +16,7 @@ var concat = require('gulp-concat');
 var del = require('del');
 var run = require('run-sequence');
 var uglify = require('gulp-uglify');
+var ghPages = require('gulp-gh-pages');
 var server = require('browser-sync').create();
 
 
@@ -161,4 +162,9 @@ gulp.task('demo', function() {
     cors: true,
     ui: false
   });
+});
+
+gulp.task('deploy', function() {
+  return gulp.src('./build/**/*')
+    .pipe(ghPages());
 });
