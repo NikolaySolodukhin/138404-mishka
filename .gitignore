@@ -11,3 +11,4 @@ build/
 img/symbols.svg
 js/main.js
 Thumbs.db
+.publish
