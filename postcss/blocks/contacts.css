@@ -1,7 +1,7 @@
 .contacts {
+  margin-bottom: 37px;
   font-weight: normal;
   color: $secondary-text-color;
-  margin-bottom: 37px;
   @media (--tablet-width) {
     margin-bottom: 56px;
   }
@@ -14,32 +14,32 @@
   position: relative;
   @media (--tablet-width) {
     background: white url('../img/icon-flag.svg') no-repeat top right 3px;
-    background-origin: content-box;
     background-size: 47px 81px;
+    background-origin: content-box;
   }
   @media (--desktop-width) {
     min-height: 432px;
     padding: 25px calc($column-width-dekstop*3) 0 $column-width-dekstop;
-    background-origin: border-box;
     background-position: top 60px left 65px;
+    background-origin: border-box;
   }
 }
 
 .contacts__title {
+  margin-bottom: 10px;
   font-weight: bold;
   font-size: 18px;
   line-height: 30px;
   color: black;
-  margin-bottom: 10px;
   @media (--tablet-width) {
     @mixin main-title-tablet;
-    padding-top: 15px;
     margin-bottom: 32px;
+    padding-top: 15px;
   }
   @media (--desktop-width) {
     @mixin main-title-desktop;
-    padding-top: 0;
     margin-bottom: 28px;
+    padding-top: 0;
   }
 }
 
@@ -84,9 +84,9 @@
 }
 
 .contacts__link {
-  text-decoration: none;
-  color: $secondary-text-color;
   padding-bottom: 5px;
+  color: $secondary-text-color;
+  text-decoration: none;
   border-bottom: 1px solid $color-tiffani;
   &:hover,
   &:focus {

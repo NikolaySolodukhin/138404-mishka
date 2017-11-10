@@ -13,11 +13,11 @@
 }
 
 .select-input__label {
-  font-size: 17px;
-  line-height: 20px;
   display: block;
   padding: 15px;
-  border: 2px solid $color-border;
-  color: $secondary-text-color;
   font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+  color: $secondary-text-color;
+  border: 2px solid $color-border;
 }

@@ -31,21 +31,21 @@
 }
 
 .about__item-text {
+  margin: 16px 0;
+  padding-top: 52px;
+  padding-right: 10px;
   font-weight: bold;
   font-size: 17px;
   line-height: 20px;
   color: black;
   background-repeat: no-repeat;
-  padding-top: 52px;
-  padding-right: 10px;
-  margin: 16px 0;
   background-position: left top;
   @media (--tablet-width) {
+    width: 50%;
+    margin: 30px 0;
+    padding-right: 0;
     font-size: 20px;
     line-height: 22px;
-    width: 50%;
-    padding-right: 0;
-    margin: 30px 0;
   @media (--desktop-width) {
     width: 40%;
   }

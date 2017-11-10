@@ -18,6 +18,10 @@ var run = require('run-sequence');
 var uglify = require('gulp-uglify');
 var ghPages = require('gulp-gh-pages');
 var server = require('browser-sync').create();
+var flexbugsFixes = require('postcss-flexbugs-fixes');
+var sourcemaps = require('gulp-sourcemaps');
+var sorting = require('postcss-sorting');
+var sprites = require('postcss-sprites');
 
 
 gulp.task('clean', function() {
@@ -38,23 +42,48 @@ gulp.task('style', function() {
     }),
     autoprefixer({browsers: [
       'last 2 versions'
-    ]})
+    ]}),
+    flexbugsFixes(),
   ]))
-  .pipe(csso())
+  .pipe(csso( {
+    restructure: true,
+      sourceMap: true,
+      debug: true
+  }))
   .pipe(gulp.dest('build/css'));
 });
 
-gulp.task('style:dev', function() {
-  return gulp.src('postcss/style.css')
-  .pipe(plumber())
-  .pipe(postcss([
+gulp.task('style:dev', function () {
+  var opts = {
+    stylesheetPath: './css',
+    spritePath: './img/sprite/',
+    filterBy: function (image) {
+      if (!/\/img\/sprite\//.test(image.url)) {
+        return Promise.reject();
+      }
+      return Promise.resolve();
+    }
+  };
+  var processors = [
     precss(),
-    autoprefixer({browsers: [
-      'last 2 versions'
-    ]})
-  ]))
-  .pipe(gulp.dest('css'))
-  .pipe(server.stream());
+    autoprefixer({
+      browsers: [
+        'last 4 versions'
+      ]
+    }),
+    flexbugsFixes(),
+    sorting(),
+    sprites(opts)
+  ];
+  return gulp.src('postcss/style.css')
+    .pipe(plumber())
+    .pipe(sourcemaps.init())
+    .pipe(sourcemaps.identityMap())
+    .pipe(postcss(processors))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('css'))
+    .pipe(plumber.stop())
+    .pipe(server.stream());
 });
 
 

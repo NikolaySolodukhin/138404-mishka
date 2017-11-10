@@ -1,9 +1,9 @@
 .products {
   display: flex;
+  flex-grow: 1;
   flex-wrap: wrap;
   justify-content: center;
   align-content: flex-start;
-  flex-grow: 1;
   align-items: stretch;
   @media (--desktop-width) {
     justify-content: space-between;

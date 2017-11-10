@@ -1,17 +1,17 @@
 .container {
-  padding-left: 9.375%;
   padding-right: 9.375%;
+  padding-left: 9.375%;
   @media (--tablet-width) {
-    padding-left: 6.512%;
-    padding-right: 6.512%;
     width: 86.979%;
     max-width: 1050px;
+    padding-right: 6.512%;
+    padding-left: 6.512%;
   }
   @media (--desktop-width) {
     width: 1050px;
-    padding-left: 4.348%;
-    padding-right: 4.348%;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
+    padding-right: 4.348%;
+    padding-left: 4.348%;
   }
 }

@@ -1,18 +1,18 @@
 .btn {
-  font-family: $font-family-set;
-  font-weight: bold;
-  line-height: 20px;
-  font-size: 18px;
-  color: $secondary-text-color;
-  text-decoration: none;
-  border: 2px solid $secondary-text-color;
-  text-transform: uppercase;
-  background-color: white;
-  text-align: center;
-  padding: 15px;
   display: block;
-  width: 100%;
   box-sizing: border-box;
+  width: 100%;
+  padding: 15px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  font-family: $font-family-set;
+  text-align: center;
+  color: $secondary-text-color;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: white;
+  border: 2px solid $secondary-text-color;
 
     &_tiffany {
       color: white;
@@ -29,10 +29,10 @@
 
     &_review {
       @media (--tablet-width) {
-      width: 175px;
-      margin-right: 0;
       order: -1;
+      width: 175px;
       margin-top: 3px;
+      margin-right: 0;
       @media (--desktop-width) {
         margin-top: 16px;
       }
@@ -42,18 +42,18 @@
     &_feedback {
       @media (--tablet-width) {
         width: 230px;
-        margin-left: auto;
         margin-right: auto;
+        margin-left: auto;
       }
       @media (--desktop-width) {
-        margin-left: 0;
         margin-right: 0;
+        margin-left: 0;
       }
     }
 
     &:hover, &:focus {
-      background-color: $secondary-text-color;
       color: white;
+      background-color: $secondary-text-color;
     }
 
     &:active {

@@ -24,8 +24,8 @@
 
 .page-footer__social,
 .page-footer__copyright {
-  min-height: 79px;
   flex-basis: 33.33%;
+  min-height: 79px;
 }
 
 .page-footer__logo {

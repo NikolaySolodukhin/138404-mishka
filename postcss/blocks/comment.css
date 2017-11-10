@@ -5,16 +5,16 @@
 }
 
 .comment__text {
+  margin-bottom: 26px;
   font-weight: normal;
   font-size: 15px;
   line-height: 30px;
   color: $secondary-text-color;
-  margin-bottom: 26px;
   @media (--tablet-width) {
-    font-size: 17px;
-    line-height: 30px;
     margin-top: 44px;
     margin-bottom: 57px;
+    font-size: 17px;
+    line-height: 30px;
   }
   @media (--desktop-width) {
     margin-right: 80px;
@@ -23,11 +23,11 @@
 }
 
 .comment__author {
+  margin-bottom: 3px;
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
   color: black;
-  margin-bottom: 3px;
   @media (--tablet-width) {
     width: calc($column-width-tablet*2);
   }

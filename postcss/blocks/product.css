@@ -1,9 +1,18 @@
 .product {
   display: flex;
   flex-direction: column;
-  margin-bottom: 30px;
   width: 100%;
+  margin-bottom: 30px;
   border: 1px solid $color-border;
+  @media (--tablet-width) {
+    flex-direction: row;
+    align-items: stretch;
+    margin-bottom: 53px;
+  }
+  @media (--desktop-width) {
+    flex-direction: column;
+    width: 30%;
+  }
   &:hover .product__text,
   &:focus .product__text {
     box-shadow: 0 4px 5px 2px $color-border;
@@ -11,33 +20,24 @@
   &:active .product__text {
     box-shadow: 0 2px 5px 1px $color-border;
   }
-  @media (--tablet-width) {
-    align-items: stretch;
-    margin-bottom: 53px;
-    flex-direction: row;
-  }
-  @media (--desktop-width) {
-    width: 30%;
-    flex-direction: column;
-  }
 }
 
 .product__text {
-  padding-left: 9.6%;
-  padding-right: 9.6%;
-  cursor: pointer;
   padding-top: 27px;
+  padding-right: 9.6%;
+  padding-left: 9.6%;
+  cursor: pointer;
   @media (--tablet-width) {
+    display: flex;
+    flex-direction: column;
     width: 42%;
     padding: 0 4%;
-    display: flex;
     padding-top: 26px;
-    flex-direction: column;
   }
   @media (--desktop-width) {
+    flex-grow: 1;
     width: auto;
     padding: 0 8%;
-    flex-grow: 1;
     padding-top: 22px;
   }
 }
@@ -50,9 +50,13 @@
 
 .product__name {
   @mixin secondary-title;
+  margin-bottom: 5px;
   color: black;
   text-decoration: none;
-  margin-bottom: 5px;
+  @media (--tablet-width) {
+    padding-left: 3px;
+    font-size: 20px;
+  }
 
 
   &:hover, &:focus {
@@ -62,27 +66,23 @@
   &:active {
     opacity: 0.3;
   }
-  @media (--tablet-width) {
-    font-size: 20px;
-    padding-left: 3px;
-  }
 }
 
 .product__description {
+  margin-bottom: 18px;
   font-weight: normal;
   font-size: 13px;
   line-height: 30px;
   color: $secondary-text-color;
-  margin-bottom: 18px;
   @media (--tablet-width) {
-    font-size: 15px;
     padding-left: 5px;
+    font-size: 15px;
   }
 }
 
 .product__link {
-  text-decoration: none;
   width: 100%;
+  text-decoration: none;
   @media (--tablet-width) {
     &_half-width {
       width: 50%;
@@ -96,17 +96,17 @@
 .product__buy {
   display: flex;
   justify-content: space-between;
-  font-weight: bold;
-  line-height: 24px;
-  font-size: 15px;
   padding-top: 20px;
   padding-bottom: 29px;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 24px;
   border-top: 1px solid #ececec;
   @media (--tablet-width) {
-    font-size: 17px;
     margin-top: auto;
     padding-bottom: 26px;
     padding-left: 8px;
+    font-size: 17px;
   }
   @media (--desktop-width) {
     padding-left: 0px;
@@ -115,8 +115,8 @@
 
 .product__img {
   display: block;
-  height: auto;
   width: 100%;
+  height: auto;
   @media (--tablet-width) {
     width: 334px;
     height: 334px;
@@ -128,9 +128,9 @@
 }
 
 .product__add {
-  border: none;
-  background-color: white;
   padding: 0 4px;
+  background-color: white;
+  border: none;
   @media (--tablet-width) {
     padding: 0 3px;
   }
@@ -140,8 +140,8 @@
 }
 
 .product__basket {
-  fill: $color-border;
   cursor: pointer;
+  fill: $color-border;
   &:hover,
   &:focus {
     fill: $color-tiffani;

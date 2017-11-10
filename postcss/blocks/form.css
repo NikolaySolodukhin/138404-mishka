@@ -13,8 +13,8 @@
     margin-bottom: 0px;
   }
   @media (--desktop-width) {
-    margin-left: 16.667%;
     width: calc($column-width-dekstop*4);
+    margin-left: 16.667%;
   }
 }
 
@@ -42,23 +42,23 @@
   line-height: 24px;
   color: $secondary-text-color;
   @media (--tablet-width) {
+    margin-bottom: 7px;
     font-size: 17px;
     line-height: 30px;
-    margin-bottom: 7px;
   }
 }
 
 .form__required {
+  margin-top: 0px;
+  margin-bottom: 29px;
   font-weight: normal;
   font-size: 14px;
   line-height: 16px;
-  margin-top: 0px;
-  margin-bottom: 29px;
   color: $secondary-text-color;
   @media (--tablet-width) {
+    margin-bottom: 0px;
     font-size: 17px;
     line-height: 30px;
-    margin-bottom: 0px;
   }
 }
 

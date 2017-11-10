@@ -6,19 +6,19 @@
 
 .logo__img {
   margin: 19px 0;
-  &:hover, &:focus {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
   @media (--tablet-width) {
     width: 113px;
     height: 46px;
   }
   @media (--desktop-width) {
     width: 149px;
-    height: 72px
+    height: 72px;
+  }
+  &:hover, &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

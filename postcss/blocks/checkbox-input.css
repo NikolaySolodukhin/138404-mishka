@@ -16,12 +16,12 @@
 }
 
 .checkbox-input__label {
-  font-weight: bold;
-  font-size: 17px;
-  line-height: 18px;
   display: flex;
   align-items: baseline;
   overflow: hidden;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
   @media (--tablet-width) {
     font-size: 19px;
   }
@@ -32,8 +32,8 @@
     @media (--tablet-width) {
       width: 54px;
       height: 52px;
-      padding-top: 12px;
       margin-right: 26px;
+      padding-top: 12px;
     }
   }
   &:hover::before {
