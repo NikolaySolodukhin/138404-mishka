@@ -194,7 +194,22 @@ gulp.task("critical", function() {
         inline: true,
         css: "build/css/style.css",
         minify: true,
-        ignore: ["@font-face", /url\(/]
+        ignore: ["@font-face", /url\(/],
+        dimensions: [{
+            height: 812,
+            width: 375,
+        },
+        {
+            height: 1024,
+            width: 768
+        },
+        {
+            height: 768,
+            width: 1024
+        }, {
+            height: 900,
+            width: 1200
+        }]
       })
     )
     .on("error", function(err) {
