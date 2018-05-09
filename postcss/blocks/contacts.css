@@ -1,25 +1,29 @@
 .contacts {
   margin-bottom: 37px;
   font-weight: normal;
-  color: $secondary-text-color;
+  color: var(--secondary-text-color);
+
   @media (--tablet-width) {
     margin-bottom: 56px;
   }
+
   @media (--desktop-width) {
     margin-bottom: 102px;
   }
-  }
+}
 
 .contacts__wrapper {
   position: relative;
+
   @media (--tablet-width) {
     background: white url('../img/icon-flag.svg') no-repeat top right 3px;
     background-size: 47px 81px;
     background-origin: content-box;
   }
+
   @media (--desktop-width) {
     min-height: 432px;
-    padding: 25px calc($column-width-dekstop*3) 0 $column-width-dekstop;
+    padding: 25px calc(var(--column-width-dekstop)*3) 0 var(--column-width-dekstop);
     background-position: top 60px left 65px;
     background-origin: border-box;
   }
@@ -31,11 +35,13 @@
   font-size: 18px;
   line-height: 30px;
   color: black;
+
   @media (--tablet-width) {
     @mixin main-title-tablet;
     margin-bottom: 32px;
     padding-top: 15px;
   }
+
   @media (--desktop-width) {
     @mixin main-title-desktop;
     margin-bottom: 28px;
@@ -47,10 +53,12 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 21px;
+
   @media (--tablet-width) {
     flex-direction: row;
     margin-bottom: 37px;
   }
+
   @media (--desktop-width) {
     flex-direction: column;
     margin-bottom: 58px;
@@ -61,10 +69,12 @@
   display: flex;
   font-size: 15px;
   line-height: 30px;
+
   @media (--tablet-width) {
-    width: calc($column-width-tablet*2);
+    width: calc(var(--column-width-tablet)*2);
     font-size: 17px;
   }
+
   @media (--desktop-width) {
     width: 100%;
   }
@@ -72,12 +82,11 @@
 
 .contacts__param {
   padding-right: 15px;
-  @media (--tablet-width) {
-  }
 }
 
 .contacts__value {
   padding-left: 15px;
+
   @media (--tablet-width) {
     padding: 0 9px;
   }
@@ -85,13 +94,15 @@
 
 .contacts__link {
   padding-bottom: 5px;
-  color: $secondary-text-color;
+  color: var(--secondary-text-color);
   text-decoration: none;
-  border-bottom: 1px solid $color-tiffani;
+  border-bottom: 1px solid var(--color-tiffani);
+
   &:hover,
   &:focus {
-    color: $color-tiffani;
+    color: var(--color-tiffani);
   }
+
   &:active {
     opacity: 0.3;
   }

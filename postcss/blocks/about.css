@@ -1,5 +1,6 @@
 .about {
   margin-bottom: 15px;
+
   @media (--tablet-width) {
     margin-bottom: 51px;
   }
@@ -8,12 +9,14 @@
 .about__wrapper {
   display: flex;
   flex-direction: column;
+
   @media (--tablet-width) {
     flex-direction: row;
     flex-wrap: wrap;
   }
+
   @media (--desktop-width) {
-    padding-left: $column-width-dekstop;
+    padding-left: var(--column-width-dekstop);
   }
 }
 
@@ -21,10 +24,12 @@
   @mixin main-title;
   width: 100%;
   margin-bottom: 16px;
+
   @media (--tablet-width) {
     @mixin main-title-tablet;
     margin-bottom: 20px;
   }
+
   @media (--desktop-width) {
     @mixin main-title-desktop;
   }
@@ -40,61 +45,69 @@
   color: black;
   background-repeat: no-repeat;
   background-position: left top;
+
   @media (--tablet-width) {
     width: 50%;
     margin: 30px 0;
     padding-right: 0;
     font-size: 20px;
     line-height: 22px;
+  }
+
   @media (--desktop-width) {
     width: 40%;
   }
-}
 
   &_ecological {
     background-image: url('../img/icon-feature-1.svg');
     background-position: 8px top;
+
     @media (--tablet-width) {
-    order: 1;
-  }
+      order: 1;
+    }
   }
 
   &_scandinavian {
     background-image: url('../img/icon-feature-3.svg');
+
     @media (--tablet-width) {
-    order: 3;
-  }
+      order: 3;
+    }
   }
 
   &_increase-like {
     background-image: url('../img/icon-feature-5.svg');
     background-position: 7px 4px;
+
     @media (--tablet-width) {
-    order: 5;
-  }
+      order: 5;
+    }
   }
 
   &_with-love {
     background-image: url('../img/icon-feature-2.svg');
     background-position: 4px top;
+
     @media (--tablet-width) {
-    order: 2;
-  }
+      order: 2;
+    }
   }
 
   &_domestic-manufacturers {
     background-image: url('../img/icon-feature-4.svg');
     background-position: left top;
+
     @media (--tablet-width) {
-    order: 4;
-  }
+      order: 4;
+    }
   }
 
   &_gift-wrap {
     background-image: url('../img/icon-feature-6.svg');
     background-position: 3px top;
+
     @media (--tablet-width) {
-    order: 6;
-  }
+      order: 6;
+    }
   }
 }

@@ -6,14 +6,16 @@
   padding-bottom: 1px;
   padding-left: 0;
   border: none;
+
   @media (--tablet-width) {
     padding-top: 50px;
     padding-bottom: 26px;
+
   @media (--desktop-width) {
     padding-bottom: 25px;
   }
     &_background {
-      background-color: $background-color;
+      background-color: var(--background-color);
     }
   }
 }
@@ -21,6 +23,7 @@
 .survey__wrapper {
   display: flex;
   flex-direction: column;
+
   @media (--tablet-width) {
     flex-direction: row;
     align-items: baseline;
@@ -37,28 +40,33 @@
   font-weight: bold;
   font-size: 17px;
   line-height: 16px;
-  color: $color-tiffani;
+  color: var(--color-tiffani);
   text-transform: uppercase;
+
   @media (--tablet-width) {
     flex-shrink: 0;
-    width: $column-width-tablet;
+    width: var(--column-width-tablet);
     margin-top: 0px;
   }
+
   @media (--desktop-width) {
-    width: $column-width-dekstop;
+    width: var(--column-width-dekstop);
     padding-left: 61px;
   }
+
   &_margin-small {
     margin-bottom: 7px;
   }
+
   &::after {
     content: '';
     position: absolute;
     top: 50%;
     width: 100%;
     height: 1px;
-    margin-left: 25px;
-    background-color: $color-tiffani;
+    margin-left: 20%;
+    background-color: var(--color-tiffani);
+
     @media (--tablet-width) {
       content: none;
     }
@@ -69,20 +77,24 @@
   position: relative;
   display: flex;
   flex-direction: column;
+
   @media (--tablet-width) {
     flex-direction: column;
     flex-wrap: wrap;
-    width: calc($column-width-tablet*3);
+    width: calc(var(--column-width-tablet) * 3);
+
     &_row-direction {
       flex-direction: row;
     }
   }
+
   @media (--desktop-width) {
-    width: calc($column-width-dekstop*4);
+    width: calc(var(--column-width-dekstop) * 4);
   }
+
   &_wide {
-    @media(--desktop-width) {
-      width: calc($column-width-dekstop*5);
+    @media (--desktop-width) {
+      width: calc(var(--column-width-dekstop) * 5);
     }
   }
 }

@@ -3,6 +3,7 @@
   justify-content: center;
   align-items: center;
   font-size: 0;
+
   @media (--tablet-width) {
     padding-top: 2px;
   }
@@ -14,19 +15,23 @@
   margin-left: 20px;
   overflow: hidden;
   text-indent: -9999px;
+
   &:first-child {
     margin-left:0px;
   }
+
   &:last-child {
     margin-right: 0px;
   }
 }
 
 .social__icon {
+
   &:hover,
   &:focus {
-    fill: $color-tiffani;
+    fill: var(--color-tiffani);
   }
+
   &:active {
     opacity: 0.3;
   }

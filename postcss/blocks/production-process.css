@@ -2,11 +2,13 @@
   box-sizing: border-box;
   margin-bottom: 57px;
   padding-bottom: 31px;
-  border: 1px solid $color-border;
+  border: 1px solid var(--color-border);
+
   @media (--tablet-width) {
     margin-bottom: 64px;
     padding-bottom: 31px;
   }
+
   @media (--desktop-width) {
     position: relative;
     display: flex;
@@ -14,17 +16,20 @@
     margin-bottom: 105px;
     padding-bottom: 0px;
   }
+
   &:hover,
   &:focus {
-    box-shadow: 0 4px 5px 2px $color-border;
+    box-shadow: 0 4px 5px 2px var(--color-border);
   }
 }
 
 .production-process__wrap {
+
   @media (--tablet-width) {
     display: flex;
     flex-direction: column;
   }
+
   @media (--desktop-width) {
     box-sizing: border-box;
     width: 33.5%;
@@ -43,17 +48,20 @@
   padding-right: 30px;
   padding-bottom: 25px;
   padding-left: 87px;
+
   @media (--tablet-width) {
     padding-top: 33px;
     padding-bottom: 7px;
     padding-left: 46px;
   }
+
   @media (--desktop-width) {
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
     padding: 43px 0 0;
   }
+
   &::before {
     content:"";
     position: absolute;
@@ -62,10 +70,12 @@
     width: 32px;
     height: 32px;
     background: url('../img/icon-video.svg') no-repeat;
+
     @media (--tablet-width) {
       top: 31px;
       left: 43px;
     }
+
     @media (--desktop-width) {
       top: 43px;
       left: 4px;
@@ -76,11 +86,13 @@
 .production-process__title {
   @mixin secondary-title;
   margin: 0;
+
   @media (--tablet-width) {
     padding-top: 1px;
     padding-left: 62px;
     font-size: 20px;
   }
+
   @media (--desktop-width) {
     margin: 0;
     padding-top: 52px;
@@ -94,12 +106,14 @@
   font-weight: normal;
   font-size: 13px;
   line-height: 24px;
-  color: $secondary-text-color;
+  color: var(--secondary-text-color);
+
   @media (--tablet-width) {
     padding-bottom: 9px;
     font-size: 15px;
     line-height: 30px;
   }
+
   @media (--desktop-width) {
     padding-bottom: 20px;
   }
@@ -109,12 +123,14 @@
   padding-top: 14px;
   padding-right: 34px;
   padding-left: 34px;
+
   @media (--tablet-width) {
     padding-top: 11px;
     padding-right: 39px;
     padding-bottom: 15px;
     padding-left: 42px;
   }
+
   @media (--desktop-width) {
     display: flex;
     flex-grow: 1;

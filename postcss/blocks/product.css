@@ -3,22 +3,26 @@
   flex-direction: column;
   width: 100%;
   margin-bottom: 30px;
-  border: 1px solid $color-border;
+  border: 1px solid var(--color-border);
+
   @media (--tablet-width) {
     flex-direction: row;
     align-items: stretch;
     margin-bottom: 53px;
   }
+
   @media (--desktop-width) {
     flex-direction: column;
     width: 30%;
   }
+
   &:hover .product__text,
   &:focus .product__text {
-    box-shadow: 0 4px 5px 2px $color-border;
+    box-shadow: 0 4px 5px 2px var(--color-border);
   }
+
   &:active .product__text {
-    box-shadow: 0 2px 5px 1px $color-border;
+    box-shadow: 0 2px 5px 1px var(--color-border);
   }
 }
 
@@ -27,6 +31,7 @@
   padding-right: 9.6%;
   padding-left: 9.6%;
   cursor: pointer;
+
   @media (--tablet-width) {
     display: flex;
     flex-direction: column;
@@ -34,6 +39,7 @@
     padding: 0 4%;
     padding-top: 26px;
   }
+
   @media (--desktop-width) {
     flex-grow: 1;
     width: auto;
@@ -53,13 +59,15 @@
   margin-bottom: 5px;
   color: black;
   text-decoration: none;
+
   @media (--tablet-width) {
     padding-left: 3px;
     font-size: 20px;
   }
 
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     opacity: 0.6;
   }
 
@@ -73,7 +81,8 @@
   font-weight: normal;
   font-size: 13px;
   line-height: 30px;
-  color: $secondary-text-color;
+  color: var(--secondary-text-color);
+
   @media (--tablet-width) {
     padding-left: 5px;
     font-size: 15px;
@@ -83,11 +92,14 @@
 .product__link {
   width: 100%;
   text-decoration: none;
+
   @media (--tablet-width) {
+
     &_half-width {
       width: 50%;
     }
   }
+
   @media (--desktop-width) {
     width: 100%;
   }
@@ -102,12 +114,14 @@
   font-size: 15px;
   line-height: 24px;
   border-top: 1px solid #ececec;
+
   @media (--tablet-width) {
     margin-top: auto;
     padding-bottom: 26px;
     padding-left: 8px;
     font-size: 17px;
   }
+
   @media (--desktop-width) {
     padding-left: 0px;
   }
@@ -117,10 +131,12 @@
   display: block;
   width: 100%;
   height: auto;
+
   @media (--tablet-width) {
     width: 334px;
     height: 334px;
   }
+
   @media (--desktop-width) {
     width: 100%;
     height: 465px;
@@ -131,21 +147,25 @@
   padding: 0 4px;
   background-color: white;
   border: none;
+
   @media (--tablet-width) {
     padding: 0 3px;
   }
-  @media(--desktop-width) {
+
+  @media (--desktop-width) {
     padding: 0 7px;
   }
 }
 
 .product__basket {
   cursor: pointer;
-  fill: $color-border;
+  fill: var(--color-border);
+
   &:hover,
   &:focus {
-    fill: $color-tiffani;
+    fill: var(--color-tiffani);
   }
+
   &:active {
     opacity: 0.3;
   }

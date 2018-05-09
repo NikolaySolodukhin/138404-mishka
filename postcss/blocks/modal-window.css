@@ -21,8 +21,8 @@
   width: 320px;
   padding: 30px 29px 46px;
   background-color: white;
-  border: 1px solid $color-border-control;
-  box-shadow: 0 5px 5px 0 $color-border-control;
+  border: 1px solid var(--color-border-control);
+  box-shadow: 0 5px 5px 0 var(--color-border-control);
   transform: translate(-50%, -50%);
 }
 
@@ -40,5 +40,5 @@
   font-weight: normal;
   font-size: 15px;
   line-height: 30px;
-  color: $secondary-text-color;
+  color: var(--secondary-text-color);
 }

@@ -1,5 +1,6 @@
 .footer-logo {
   display: none;
+
   @media (--tablet-width) {
     display: flex;
     align-items: center;
@@ -7,10 +8,12 @@
 }
 
 .footer-logo__img {
+
   &:hover,
   &:focus {
-    fill: $color-tiffani;
+    fill: var(--color-tiffani);
   }
+
   &:active {
     opacity: 0.3;
   }

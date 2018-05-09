@@ -1,7 +1,8 @@
 .best-product-price {
   @mixin secondary-title;
   text-align: center;
-  color: $secondary-text-color;
+  color: var(--secondary-text-color);
+
   @media (--tablet-width) {
     font-size: 20px;
     line-height: 24px;

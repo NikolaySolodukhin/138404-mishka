@@ -5,18 +5,22 @@
   background-image: url('../img/map-mobile@1x.jpg');
   background-repeat: no-repeat;
   background-position: center;
+
   @media (--retina) {
     background-image: url('../img/map-mobile@2x.jpg');
     background-size: contain;
   }
+
   @media (--tablet-width) {
     height: 458px;
     margin: 0 -7.43% 53px;
     background-image: url('../img/map-tablet@1x.jpg');
+
     @media (--retina) {
       background-image: url('../img/map-tablet@2x.jpg');
     }
   }
+
   @media (--desktop-width) {
     position: absolute;
     right: 0;
@@ -24,6 +28,7 @@
     margin: 0;
     background-image: url('../img/map-desktop@1x.jpg');
     bottom: 0;
+  
     @media (--retina) {
       background-image: url('../img/map-desktop@2x.jpg');
     }

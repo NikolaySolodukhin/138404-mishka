@@ -1,16 +1,19 @@
 .radio-input {
   display: flex;
   min-height: 60px;
+
   @media (--tablet-width) {
-    width: calc($column-width-tablet*3);
+    width: calc(var(--column-width-tablet) * 3);
   }
+
   @media (--desktop-width) {
-    width: calc($column-width-dekstop*3);
+    width: calc(var(--column-width-dekstop) * 3);
   }
 }
 .radio-input__control {
+
   &:checked + .radio-input__label::before {
-    background-color: $color-tiffani;
+    background-color: var(--color-tiffani);
   }
 }
 
@@ -22,15 +25,18 @@
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
+
   @media (--tablet-width) {
     margin-bottom: 24px;
     font-size: 19px;
   }
+
   &::before {
     @mixin icon-control;
     padding: 10px;
     background-clip: content-box;
     border-radius: 50%;
+
     @media (--tablet-width) {
       width: 52px;
       height: 52px;
@@ -38,11 +44,13 @@
       padding: 13px;
     }
   }
+
   &:hover::before {
-    border: 2px solid $color-tiffani;
+    border: 2px solid var(--color-tiffani);
   }
+
   &:active::before {
-    border: 2px solid $color-border-control;
+    border: 2px solid var(--color-border-control);
   }
 }
 

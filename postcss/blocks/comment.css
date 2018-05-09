@@ -9,13 +9,15 @@
   font-weight: normal;
   font-size: 15px;
   line-height: 30px;
-  color: $secondary-text-color;
+  color: var(--secondary-text-color);
+
   @media (--tablet-width) {
     margin-top: 44px;
     margin-bottom: 57px;
     font-size: 17px;
     line-height: 30px;
   }
+
   @media (--desktop-width) {
     margin-right: 80px;
     margin-bottom: 38px;
@@ -28,8 +30,9 @@
   font-size: 18px;
   line-height: 24px;
   color: black;
+
   @media (--tablet-width) {
-    width: calc($column-width-tablet*2);
+    width: calc(var(--column-width-tablet) * 2);
   }
 }
 
@@ -38,5 +41,5 @@
   font-weight: normal;
   font-size: 17px;
   line-height: 30px;
-  color: $secondary-text-color;
+  color: var(--secondary-text-color);
 }

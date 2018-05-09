@@ -6,57 +6,61 @@
   font-weight: bold;
   font-size: 18px;
   line-height: 20px;
-  font-family: $font-family-set;
+  font-family: var(--font-family-set);
   text-align: center;
-  color: $secondary-text-color;
+  color: var(--secondary-text-color);
   text-transform: uppercase;
   text-decoration: none;
   background-color: white;
-  border: 2px solid $secondary-text-color;
+  border: 2px solid var(--secondary-text-color);
 
-    &_tiffany {
-      color: white;
-      background-color: $color-tiffani;
-      border-color: $color-tiffani;
+  &_tiffany {
+    color: white;
+    background-color: var(--color-tiffani);
+    border-color: var(--color-tiffani);
+  }
+
+  &_product {
+    margin-top: 26px;
+
+    @media (--tablet-width) {
+      margin-top: 33px;
     }
+  }
 
-    &_product {
-      margin-top: 26px;
-      @media (--tablet-width) {
-        margin-top: 33px;
-      }
-    }
-
-    &_review {
-      @media (--tablet-width) {
+  &_review {
+    @media (--tablet-width) {
       order: -1;
       width: 175px;
       margin-top: 3px;
       margin-right: 0;
-      @media (--desktop-width) {
-        margin-top: 16px;
-      }
-    }
     }
 
-    &_feedback {
-      @media (--tablet-width) {
-        width: 230px;
-        margin-right: auto;
-        margin-left: auto;
-      }
-      @media (--desktop-width) {
-        margin-right: 0;
-        margin-left: 0;
-      }
+    @media (--desktop-width) {
+      margin-top: 16px;
+    }
+ }
+
+  &_feedback {
+    @media (--tablet-width) {
+      width: 230px;
+      margin-right: auto;
+      margin-left: auto;
     }
 
-    &:hover, &:focus {
-      color: white;
-      background-color: $secondary-text-color;
+    @media (--desktop-width) {
+      margin-right: 0;
+      margin-left: 0;
     }
+  }
 
-    &:active {
-      color: rgba(255, 255, 255, 0.3);
-    }
+  &:hover,
+  &:focus {
+    color: white;
+    background-color: var(--secondary-text-color);
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }

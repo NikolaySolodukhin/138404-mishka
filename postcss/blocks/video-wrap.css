@@ -1,10 +1,12 @@
 .video-wrap {
   position: relative;
   width: 100%;
+
   @media (--tablet-width) {
     order: -1;
     min-height: 455px;
   }
+
   @media (--desktop-width) {
     position: absolute;
     top: 0;
@@ -41,6 +43,7 @@
 .video-wrap__img {
   width: 100%;
   height: auto;
+
   @media (--desktop-width) {
     height: 454px;
   }

@@ -5,6 +5,7 @@
   align-items: center;
   min-height: 79px;
   position: relative;
+
   @media (--tablet-width) {
     flex-direction: row;
     justify-content: space-between;
@@ -24,9 +25,11 @@
   cursor: pointer;
   top: 28px;
   right: 30px;
+
   @media (--tablet-width) {
     display: none;
   }
+
   &_close {
     background: url('../img/icon-menu-close.svg') no-repeat center;
   }

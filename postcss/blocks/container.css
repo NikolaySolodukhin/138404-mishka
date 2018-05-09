@@ -1,12 +1,14 @@
 .container {
   padding-right: 9.375%;
   padding-left: 9.375%;
+
   @media (--tablet-width) {
     width: 86.979%;
     max-width: 1050px;
     padding-right: 6.512%;
     padding-left: 6.512%;
   }
+  
   @media (--desktop-width) {
     width: 1050px;
     margin-right: auto;
