@@ -22,6 +22,8 @@ var flexbugsFixes = require("postcss-flexbugs-fixes");
 var sourcemaps = require("gulp-sourcemaps");
 var sorting = require("postcss-sorting");
 var sprites = require("postcss-sprites");
+var posthtml = require("gulp-posthtml");
+var include = require("posthtml-include")
 var critical = require("critical").stream;
 
 gulp.task("clean", function() {
@@ -96,6 +98,9 @@ gulp.task("style:dev", function() {
 gulp.task("htmlminify", function() {
   return gulp
     .src("build/*.html")
+    .pipe(posthtml([
+      include()
+    ]))
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build/"));
 });
