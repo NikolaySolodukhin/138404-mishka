@@ -23,8 +23,9 @@ var sourcemaps = require("gulp-sourcemaps");
 var sorting = require("postcss-sorting");
 var sprites = require("postcss-sprites");
 var posthtml = require("gulp-posthtml");
-var include = require("posthtml-include")
+var include = require("posthtml-include");
 var critical = require("critical").stream;
+var webp = require("gulp-webp");
 
 gulp.task("clean", function() {
   return del("build");
@@ -98,9 +99,7 @@ gulp.task("style:dev", function() {
 gulp.task("htmlminify", function() {
   return gulp
     .src("build/*.html")
-    .pipe(posthtml([
-      include()
-    ]))
+    .pipe(posthtml([include()]))
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build/"));
 });
@@ -135,6 +134,13 @@ gulp.task("concat:dev", function() {
     .pipe(concat("main.js"))
     .pipe(gulp.dest("js"))
     .pipe(server.stream());
+});
+
+gulp.task("webp", function() {
+  return gulp
+    .src("img/**/*.{png,jpg}")
+    .pipe(webp({ quality: 90 }))
+    .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("images", function() {
@@ -184,9 +190,17 @@ gulp.task("svg", function() {
 
 gulp.task("copy", function() {
   return gulp
-    .src(["fonts/*.{woff,woff2}", "img/*.{svg,png,jpg,gif}", "js/picturefill.js", "js/svg-use-polyfill.js"], {
-      base: "."
-    })
+    .src(
+      [
+        "fonts/*.{woff,woff2}",
+        "img/*.{svg,png,jpg,gif}",
+        "js/picturefill.js",
+        "js/svg-use-polyfill.js"
+      ],
+      {
+        base: "."
+      }
+    )
     .pipe(gulp.dest("build"));
 });
 
@@ -200,21 +214,24 @@ gulp.task("critical", function() {
         css: "build/css/style.css",
         minify: true,
         ignore: ["@font-face", /url\(/],
-        dimensions: [{
+        dimensions: [
+          {
             height: 812,
-            width: 375,
-        },
-        {
+            width: 375
+          },
+          {
             height: 1024,
             width: 768
-        },
-        {
+          },
+          {
             height: 768,
             width: 1024
-        }, {
+          },
+          {
             height: 900,
             width: 1200
-        }]
+          }
+        ]
       })
     )
     .on("error", function(err) {
@@ -250,7 +267,13 @@ gulp.task(
 );
 
 gulp.task("build", function(fn) {
-  run("clean", ["copy", "style", "jsmin", "symbols"], "critical", "htmlminify", fn);
+  run(
+    "clean",
+    ["copy", "style", "jsmin", "symbols", "webp"],
+    "critical",
+    "htmlminify",
+    fn
+  );
 });
 
 gulp.task("demo", function() {
