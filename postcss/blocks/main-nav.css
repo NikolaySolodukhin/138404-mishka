@@ -27,6 +27,11 @@
   &.main-nav_nojs .main-nav__user-list {
     margin-right: -9.5%;
     margin-left: -9.5%;
+
+    @media (--tablet-width) {
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
 
   @media (--tablet-width) {
