@@ -102,7 +102,7 @@ gulp.task("htmlminify", function() {
 
 gulp.task("jsmin", function() {
   return gulp
-    .src(["js/utils.js", "js/map.js", "js/picturefill.js", "js/svg-use-polyfill.js"])
+    .src(["js/utils.js", "js/map.js"])
     .pipe(concat("main.js"))
     .pipe(
       uglify({
@@ -179,7 +179,7 @@ gulp.task("svg", function() {
 
 gulp.task("copy", function() {
   return gulp
-    .src(["fonts/*.{woff,woff2}", "img/*.{svg,png,jpg,gif}"], {
+    .src(["fonts/*.{woff,woff2}", "img/*.{svg,png,jpg,gif}", "js/picturefill.js", "js/svg-use-polyfill.js"], {
       base: "."
     })
     .pipe(gulp.dest("build"));
