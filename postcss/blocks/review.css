@@ -38,6 +38,7 @@
   &::after {
     content: '';
     position: absolute;
+    left: 0;
     width: 100%;
     height: 5px;
     background: url('../img/bg-zigzag-line.svg') repeat-x;
