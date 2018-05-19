@@ -129,7 +129,6 @@
   }
 
   @media (--desktop-width) {
-    /*fix ie bugs*/
     margin-top: 245px;
   }
 }
