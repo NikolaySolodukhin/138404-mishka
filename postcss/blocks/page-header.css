@@ -127,6 +127,11 @@
   @media (--tablet-width) {
     flex-direction: row;
   }
+
+  @media (--desktop-width) {
+    /*fix ie bugs*/
+    margin-top: 245px;
+  }
 }
 
 .page-header__link {
