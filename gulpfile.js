@@ -102,7 +102,7 @@ gulp.task("htmlminify", function() {
 
 gulp.task("jsmin", function() {
   return gulp
-    .src(["js/utils.js", "js/map.js"])
+    .src(["js/utils.js", "js/map.js", "js/picturefill.js", "js/svg-use-polyfill.js"])
     .pipe(concat("main.js"))
     .pipe(
       uglify({
